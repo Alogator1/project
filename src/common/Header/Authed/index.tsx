@@ -71,8 +71,11 @@ const AuthedHeader: React.FC<Props> = ({
             <p className={styles['user-name']}>{`${firstName} ${lastName}`}</p>
             <p className={styles['user-role']}>{userRole}</p>
           </div>
-          <button onClick={() => logout()} className={styles['avatar-button']}>
+          <button className={styles['avatar-button']}>
             <img src={avatar} className={styles['avatar']} />
+          </button>
+          <button onClick={() => logout()} className={styles['logout-button']}>
+            Вийти
           </button>
         </div>
       </div>

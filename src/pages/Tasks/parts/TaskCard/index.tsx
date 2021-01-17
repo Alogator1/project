@@ -11,9 +11,13 @@ interface Props {
 }
 
 const TaskCard: React.FC<Props> = ({ task, canRedirect = false, mark }) => {
+  
+  console.log(task);
+  
+  
   const bottomNode = useMemo(
     () =>
-      canRedirect ? (
+      canRedirect ? task.title.indexOf('Тема') != -1 ? null : (
         <Link to={`tasks/${task.id}`} className={styles['task-card-btn-link']}>
           {'Виконати'}
         </Link>
