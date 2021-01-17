@@ -13,7 +13,7 @@ import styles from './styles.module.scss'
 const NonAuthedHeader: React.FC = () => (
   <header className={clsx('fullwidth', styles['header'])}>
     <Link to={links.login()} title="Home">
-      <ReactSVG src={Logo} className={clsx('svg', styles['logo'])} />
+      <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Google_Lens_-_new_logo.png/600px-Google_Lens_-_new_logo.png' className={clsx(styles['logo'])}/>
     </Link>
   </header>
 )

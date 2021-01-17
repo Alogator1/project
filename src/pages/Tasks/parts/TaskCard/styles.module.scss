@@ -2,7 +2,7 @@
 
 .task-card-wrapper {
   border: 1px solid rgba(5, 56, 107, 0.7);
-
+  margin-bottom: 10px;
   width: 20rem;
   height: fit-content;
   
@@ -34,6 +34,13 @@
       font-size: 14px;
       margin-bottom: 15px;
       color: rgba(133, 141, 147, 0.9);
+    }
+  }
+  &:hover{
+    background-color: #7749F8;
+    color: white;
+    .task-card-desc{
+      color: white;
     }
   }
 }

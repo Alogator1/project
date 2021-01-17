@@ -11,9 +11,10 @@ interface Props {
   task: Task | null
   onSubmit: Callback
   children?: React.ReactNode
+  goBack?:()=>void
 }
 
-const View: React.FC<Props> = ({ isLoading, onSubmit, task, children }) => (
+const View: React.FC<Props> = ({ isLoading, onSubmit, task, children, goBack }) => (
   <Layout
     showLoader={isLoading}
     className={styles['page']}
@@ -21,8 +22,9 @@ const View: React.FC<Props> = ({ isLoading, onSubmit, task, children }) => (
   >
     <h2 className={styles['title']}>{task?.title}</h2>
     <h6 className={styles['description']}>{task?.description}</h6>
-    {children}
-    <Button onClick={onSubmit}>{'Підтвердити'}</Button>
+    {children} 
+    <Button onClick={onSubmit} style={{ marginBottom: 10, backgroundColor: '#28A745', width: '20%', marginLeft: '40%' }}>{'Здати роботу'}</Button>
+    <Button onClick={goBack} style={{ backgroundColor: '#DC3545', color: 'white', width: '20%', marginLeft: '40%' }}>{'Повернутись у меню'}</Button>
   </Layout>
 )
 

@@ -45,7 +45,9 @@ const View: React.FC<Props> = ({ isLoading, tasks, taskResults, user }) => {
     <Layout showLoader={isLoading}>
       <h1 className={clsx(styles["page-header"])}>Модуль проектування</h1>
       <div className={clsx(styles["tasks-main-wrapper"])}>
-        <div className={clsx(styles["tasks-list-wrapper"])}>{tasksNode}</div>
+        <div className={clsx(styles["tasks-list-wrapper"])}>
+          <h1 className={clsx(styles["news-header"])}>Завдання</h1>
+          {tasksNode}</div>
         <div className={clsx(styles["tasks-list-wrapper"])}>
           <div className={clsx(styles["news-box"])}>
             <h1 className={clsx(styles["news-header"])}>News</h1>

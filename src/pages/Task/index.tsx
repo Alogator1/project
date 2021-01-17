@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef } from 'react'
 import { useSelector } from 'react-redux'
-import { RouteComponentProps } from 'react-router-dom'
+import { RouteComponentProps, useHistory } from 'react-router-dom'
 
 import { getId, isId } from '@services/id'
 import links from '@routes/links'
@@ -44,6 +44,12 @@ const Task: React.FC<Props> = ({ match: { params }, history: { replace } }) => {
     selectTask(id, undefined, () => replace(links.tasks()))
   }, [id, replace])
 
+  const history = useHistory();
+
+  const goBack = () => {
+    history.push('/tasks')
+}
+
   const linkNodes = useRef<NodeLink[]>(null)
 
   const onSubmit = useCallback(() => {
@@ -64,7 +70,7 @@ const Task: React.FC<Props> = ({ match: { params }, history: { replace } }) => {
   )
 
   return (
-    <View isLoading={isLoading} task={task} onSubmit={onSubmit}>
+    <View isLoading={isLoading} task={task} onSubmit={onSubmit} goBack={goBack}>
       {child}
     </View>
   )

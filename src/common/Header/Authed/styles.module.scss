@@ -24,13 +24,12 @@
 
     .logo-container {
       max-width: rem(154);
-      height: rem(26);
       display: inline-flex;
       .logo-link {
         display: inline-flex;
         .logo {
-          width: 100%;
-          height: 100%;
+          width: 30px;
+          height: 30px;
         }
       }
     }

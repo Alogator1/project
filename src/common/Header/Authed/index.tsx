@@ -1,8 +1,7 @@
 import React, { useMemo } from 'react'
 import { LinkProps } from 'react-router-dom'
 import { ReactSVG } from 'react-svg'
-import clsx from 'clsx'
-
+import clsx from 'clsx' 
 import Link from '@components/Link'
 
 import links from '@routes/links'
@@ -60,7 +59,7 @@ const AuthedHeader: React.FC<Props> = ({
       <div className={styles['left']}>
         <div className={styles['logo-container']}>
           <Link to={links.home()} title="Home" className={styles['logo-link']}>
-            <ReactSVG src={Logo} className={clsx('svg', styles['logo'])} />
+          <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Google_Lens_-_new_logo.png/600px-Google_Lens_-_new_logo.png' className={clsx(styles['logo'])}/>
           </Link>
         </div>
       </div>
